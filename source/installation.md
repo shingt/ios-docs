@@ -4,12 +4,12 @@ title: Installation
 
 Apollo iOS requires Xcode 8, which you can install from the [Mac App Store](https://itunes.apple.com/en/app/xcode/id497799835?mt=12).
 
-Follow these steps to use Apollo iOS in your app:
+Follow along with these steps (described in detail below) to use Apollo iOS in your app:
 
 1. Install the Apollo framework into your project and link it to your application target
 1. Install `apollo-codegen` globally through npm
 1. Add a code generation build step to your target
-1. Adding a schema file to your target directory
+1. Add a schema file to your target directory
 1. Add the generated API file to your target
 1. Install the Xcode add-ons to get syntax highlighting for your `.graphql` files (optional)
 1. Create `.graphql` files with your queries or mutations and add them to your target
@@ -89,7 +89,8 @@ The script above will invoke `apollo-codegen` through the `check-and-run-apollo-
 
 You'll have to copy or [download a schema](downloading-schema.html) to your target directory before generating code.
 
-Apollo iOS requires a GraphQL schema file as input to the code generation process. A schema file is a JSON file that contains the results of an an introspection query. Conventionally this file is called `schema.json`.
+Apollo iOS requires a GraphQL schema file as input to the code generation process. A schema file is a JSON file that contains the results of an an introspection query. Conventionally this file is called `schema.json`.  At this point, you can try building your target in Xcode.  This will verify that the `schema.json` file can be found by the `apollo-codegen` script created above, otherwise you'll get a build error such as:
+> Cannot find GraphQL schema file [...]
 
 <h2 id="adding-generated-api">Adding the generated API file to your target</h2>
 
